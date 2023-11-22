@@ -9,6 +9,10 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.use((req, res) => {
+    res.ststus(404).send('Page Not Found');
+});
+
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
