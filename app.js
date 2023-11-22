@@ -10,7 +10,7 @@ app.get('*', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.ststus(404).send('Page Not Found');
+    res.status(404).send('Page Not Found');
 });
 
 app.listen(port, () => {
